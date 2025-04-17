@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="passwordGenerator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Background container -->
+    <div id="backgrounddiv">
+
+        <!-- Center container -->
+        <div id="centerdiv">
+
+            <div id="passwordGeneratorTextField">PASSWORD GENERATOR</div>
+            
+            <!-- password display section -->
+            <div id="inputTextField">
+                <input placeholder="PASSWORD" readonly name="" id="displayPassword">
+
+                <button id="copyButton" type="button">
+                    <span id="copiedNotification">copied</span>
+                    <i class="fa-regular fa-copy"></i>
+                </button>
+            </div>
+
+            <!-- conditions container -->
+            <div id="passwordConditionsField">
+
+                <!-- password length -->
+                <div id="passwordLengthTextField">
+                    <div id="passwordLength">Password Length</div>
+
+                    <div id="paswordLengthInDigit"></div>
+                </div>
+
+                <!-- slider -->
+                <div id="scroller">
+                    <input type="range" min="1" max="20" step="1" id="range">
+                </div>
+
+                <!-- checkboxes with labels -->
+                <div id="checkboxes">
+                    <input  class="checkbox" type="checkbox" id="uppercase">
+                    <label class="textCommonProperties" for="uppercase">Include Uppercase</label><br><br>
+                    <input  class="checkbox" type="checkbox" id="Lowercase">
+                    <label class="textCommonProperties" for="uppercase">Include Lowercase</label><br><br>
+                    <input  class="checkbox" type="checkbox" id="Numbers">
+                    <label class="textCommonProperties" for="uppercase">Include Numbers</label><br><br>
+                    <input  class="checkbox" type="checkbox" id="Symbols">
+                    <label class="textCommonProperties" for="uppercase">Include Symbols</label><br><br>
+                </div>
+
+                <!-- strength display -->
+                <div id="strength">
+                    <div id="strengthText">Strength</div>
+
+                    <div id="colour"></div>
+                </div>
+
+                <!-- generate button -->
+                <button id="generateButton">Generate Password</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="passwordGenerator.js"></script>
+</body>
+</html>
+
+
+<!-- readonly is used to make our input field inaccessable  -->
+ <!-- custom attribute -->
+<!-- step attribute in range input tag -->
